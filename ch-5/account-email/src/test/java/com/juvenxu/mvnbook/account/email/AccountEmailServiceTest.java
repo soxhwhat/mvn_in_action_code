@@ -16,6 +16,9 @@ import com.icegreen.greenmail.util.ServerSetup;
 
 public class AccountEmailServiceTest
 {
+    /**
+     * 这里使用GreenMail作为测试邮件服务器
+     */
     private GreenMail greenMail;
 
     @Before
@@ -36,7 +39,7 @@ public class AccountEmailServiceTest
 
         String subject = "Test Subject";
         String htmlText = "<h3>Test</h3>";
-        accountEmailService.sendMail( "test2@juvenxu.com", subject, htmlText );
+        accountEmailService.sendMail( "test3@juvenxu.com", subject, htmlText );
 
         greenMail.waitForIncomingEmail( 2000, 1 );
 
